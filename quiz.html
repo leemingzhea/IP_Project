@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkAnswers() {
+            // Correct answers
+            const correctAnswers = ['True', 'False'];
+
+            const resultElement = document.getElementById('result');
+            const selectedAnswers = document.querySelectorAll('input[type="radio"]:checked');
+
+            if (selectedAnswers.length === correctAnswers.length) {
+                const isAllCorrect = Array.from(selectedAnswers).every((answer, index) => {
+                    return answer.value === correctAnswers[index];
+                });
+
+                resultElement.textContent = isAllCorrect ? 'Correct!' : 'Incorrect!';
+            } else {
+                resultElement.textContent = 'Please answer all questions.';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="quiz-container">
+        <img src="images/garen.jpg" alt="Question 1 Image">
+        <div class="quiz-content">
+            <h2 style="font-family: 'Press Start 2P', cursive; margin-bottom: 10px;">Question 1:</h2>
+            <p style="font-family: 'Press Start 2P', cursive; margin-bottom: 15px;">Garen is a Fighter.</p>
+            <input type="radio" name="answer-1" value="True"> True
+            <input type="radio" name="answer-1" value="False"> False
+        </div>
+    </div>
+
+    <div class="quiz-container">
+        <img src="images/katarina.jpg" alt="Question 2 Image">
+        <div class="quiz-content">
+            <h2 style="font-family: 'Press Start 2P', cursive; margin-bottom: 10px;">Question 2:</h2>
+            <p style="font-family: 'Press Start 2P', cursive; margin-bottom: 15px;">Katarina is a Mage.</p>
+            <input type="radio" name="answer-2" value="True"> True
+            <input type="radio" name="answer-2" value="False"> False
+        </div>
+    </div>
+
+    <div id="result" style="font-family: 'Press Start 2P', cursive;"></div>
+    <button id="submit-btn" style="font-family: 'Press Start 2P', cursive;" onclick="checkAnswers()">Submit</button>
+</body>
+</html>
