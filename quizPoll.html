@@ -2,20 +2,56 @@
 <html lang="en">
 
 <head>
+    <title>Community Poll</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Vote Page</title>
 </head>
 
-<body>
+<script>
+    function showResult() {
+        const selectedChampion = document.querySelector('input[name="vote"]:checked');
+        const resultElement = document.getElementById('poll-result');
+
+        if (selectedChampion) {
+            const championName = getChampionName(selectedChampion.value);
+            resultElement.textContent = `You have voted for ${championName}!`;
+
+            // Add the selected-container class to the voted container
+            const votedContainer = selectedChampion.closest('.poll-container');
+            votedContainer.classList.add('selected-container');
+            
+            // Remove the class after the animation completes (1s)
+            setTimeout(() => {
+                votedContainer.classList.remove('selected-container');
+            }, 1000);
+        } else {
+            resultElement.textContent = 'Please select a champion before voting.';
+        }
+    }
+
+    function getChampionName(championValue) {
+        switch (championValue) {
+            case '1':
+                return 'Akali';
+            case '2':
+                return 'Bard';
+            case '3':
+                return 'Kaisa';
+            default:
+                return 'Unknown Champion';
+        }
+    }
+</script>
+
+<body class="body-poll">
     <div class="vote-text">
         <p>Welcome to our weekly community poll!</p>
         <p>Help us choose the next collectible champion by voting for your favorite!</p>
         <p>Cast your vote to make a difference in our community!</p>
     </div>
 
-    <div class="container">
+    <div class="poll-container">
         <video width="380" autoplay loop muted>
             <source src="images/akali.webm" type="video/webm">
             Your browser does not support the video tag.
@@ -23,7 +59,7 @@
         <input type="radio" name="vote" value="1">
     </div>
 
-    <div class="container">
+    <div class="poll-container">
         <video width="380" autoplay loop muted>
             <source src="images/bard.webm" type="video/webm">
             Your browser does not support the video tag.
@@ -31,7 +67,7 @@
         <input type="radio" name="vote" value="2">
     </div>
 
-    <div class="container">
+    <div class="poll-container">
         <video width="380" autoplay loop muted>
             <source src="images/kaisa.webm" type="video/webm">
             Your browser does not support the video tag.
@@ -39,45 +75,7 @@
         <input type="radio" name="vote" value="3">
     </div>
 
-    <div id="result" class="result"></div>
-
-    <button class="button" onclick="showResult()">Vote</button>
-
-    <script>
-        function showResult() {
-            const selectedChampion = document.querySelector('input[name="vote"]:checked');
-            const resultElement = document.getElementById('result');
-    
-            if (selectedChampion) {
-                const championName = getChampionName(selectedChampion.value);
-                resultElement.textContent = `You have voted for ${championName}!`;
-    
-                // Add the selected-container class to the voted container
-                const votedContainer = selectedChampion.closest('.container');
-                votedContainer.classList.add('selected-container');
-                
-                // Remove the class after the animation completes (1s)
-                setTimeout(() => {
-                    votedContainer.classList.remove('selected-container');
-                }, 1000);
-            } else {
-                resultElement.textContent = 'Please select a champion before voting.';
-            }
-        }
-    
-        function getChampionName(championValue) {
-            switch (championValue) {
-                case '1':
-                    return 'Akali';
-                case '2':
-                    return 'Bard';
-                case '3':
-                    return 'Kaisa';
-                default:
-                    return 'Unknown Champion';
-            }
-        }
-    </script>
+    <div id="poll-result" class="poll-result"></div>
+    <button class="poll-button" onclick="showResult()">Vote</button>
 </body>
-
 </html>
