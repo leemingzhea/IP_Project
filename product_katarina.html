@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="store.html"><img src="images/whitelogo.jpg" alt="logo" width="200" height="70"></a>
@@ -59,7 +60,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h1 class="display-5 fw-bolder">Katarina's Dagger</h1>
+                    <h1 class="display-5 fw-bolder">Garen's Sword</h1>
                     <div class="fs-5 mb-5">
                         <span class="product-price" style="font-weight: bold; color: #C7383A; font-size: 1.8rem;">$80.00</span>
                     </div>
@@ -84,10 +85,10 @@
                         </select>
                     </div>
                     <!-- Add to Cart Button -->
-                    <button class="btn btn-outline-dark flex-shrink-0 btn-hover-red" type="button" style="font-size: 1.2rem; padding: 0.75rem 1.5rem;">
+                    <button class="btn btn-outline-dark flex-shrink-0" type="button" style="font-size: 1.2rem; padding: 0.75rem 1.5rem; background-color: transparent; color: #343a40; border-color: #343a40;" onmouseover="this.style.backgroundColor='#C7383A'; this.style.color='white'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#343a40';">
                         <i class="bi-cart-fill me-1"></i>
                         Add to cart
-                    </button>
+                    </button>                    
                 </div>
             </div>
         </div>
@@ -99,51 +100,52 @@
     <div class="container">
         <h1>Customer Reviews</h1>
         <div class="row">
-          <div class="col-md-6">
-            <div class="review-card">
-              <h4>John Doe</h4>
-              <p>Rating: 5 stars</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id nunc nec justo consequat pellentesque. Nulla facilisi. Sed tincidunt, lorem ac tempus luctus, turpis elit ullamcorper nulla, non maximus felis mi id elit.</p>
+            <div class="col-md-6">
+                <div class="review-card" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+                    <h4 margin-bottom: 10px;>John Doe</h4>
+                    <p margin-bottom: 5px;>Rating: 5 stars</p>
+                    <p margin-bottom: 5px;>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id nunc nec justo consequat pellentesque. Nulla facilisi. Sed tincidunt, lorem ac tempus luctus, turpis elit ullamcorper nulla, non maximus felis mi id elit.</p>
+                </div>
+
+                <div class="review-card" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+                    <h4 margin-bottom: 10px;>Jane Smith</h4>
+                    <p margin-bottom: 5px;>Rating: 4 stars</p>
+                    <p margin-bottom: 5px;>Morbi auctor nibh ac dolor pellentesque, at suscipit ante aliquet. Sed euismod, quam eu consequat eleifend, erat elit porttitor elit, in posuere dui lorem vitae est.</p>
+                </div>
             </div>
-        
-            <div class="review-card">
-              <h4>Jane Smith</h4>
-              <p>Rating: 4 stars</p>
-              <p>Morbi auctor nibh ac dolor pellentesque, at suscipit ante aliquet. Sed euismod, quam eu consequat eleifend, erat elit porttitor elit, in posuere dui lorem vitae est.</p>
+
+            <div class="col-md-6">
+                <div class="review-card" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+                    <h4 margin-bottom: 10px;>Michael Johnson</h4>
+                    <p margin-bottom: 5px;>Rating: 3 stars</p>
+                    <p margin-bottom: 5px;>Nulla facilisi. Curabitur sit amet hendrerit lorem. Integer scelerisque, tellus id porta dignissim, mauris sapien eleifend ipsum, id ullamcorper libero orci at libero. Ut auctor bibendum nulla, id hendrerit elit fermentum vel.</p>
+                </div>
+
+                <div class="review-card" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+                    <h4 margin-bottom: 10px;>Sarah Thompson</h4>
+                    <p margin-bottom: 5px;>Rating: 5 stars</p>
+                    <p margin-bottom: 5px;>Proin consectetur turpis vitae rhoncus porta. Aliquam id lorem eu risus venenatis fringilla. Curabitur volutpat, turpis vitae sagittis lacinia, lorem nulla feugiat tellus, vitae ullamcorper mi lacus a orci.</p>
+                </div>
             </div>
-          </div>
-        
-          <div class="col-md-6">
-            <div class="review-card">
-              <h4>Michael Johnson</h4>
-              <p>Rating: 3 stars</p>
-              <p>Nulla facilisi. Curabitur sit amet hendrerit lorem. Integer scelerisque, tellus id porta dignissim, mauris sapien eleifend ipsum, id ullamcorper libero orci at libero. Ut auctor bibendum nulla, id hendrerit elit fermentum vel.</p>
-            </div>
-        
-            <div class="review-card">
-              <h4>Sarah Thompson</h4>
-              <p>Rating: 5 stars</p>
-              <p>Proin consectetur turpis vitae rhoncus porta. Aliquam id lorem eu risus venenatis fringilla. Curabitur volutpat, turpis vitae sagittis lacinia, lorem nulla feugiat tellus, vitae ullamcorper mi lacus a orci.</p>
-            </div>
-          </div>
         </div>
     </div>
+
     
     <!-- Footer -->
     <footer class="py-5" style="background-color: #2D2D2D;">
         <div class="container"><p class="m-0 text-center text-white">&copy; Legends Vault, 2023. All rights reserved</p></div>
     </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-    crossorigin="anonymous">
-  </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+      crossorigin="anonymous">
+    </script>
 
 </body>
 </html>
