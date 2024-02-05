@@ -6,120 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        .footer-container {
-            margin-top: auto;
-        }
-
-        footer {
-            background-color: #2D2D2D;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            width: 100%;
-        }
-
-        .quiz-container {
-            max-width: 770px;
-            margin: 20px auto;
-            padding: 10px; /* Adjust padding to reduce height */
-            border: 2px solid #007bff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            font-size: 1.5rem;
-            text-align: left;
-            display: flex;
-            align-items: center;
-        }
-
-        .quiz-image {
-            max-width: 50%;
-            margin-right: 20px;
-            border-radius: 8px;
-        }
-
-        .quiz-content {
-            flex-grow: 1;
-            overflow: hidden; /* Ensure all text is within the container */
-        }
-
-        .quiz-question {
-            font-family: 'Press Start 2P', cursive;
-            margin-bottom: 20px;
-            font-size: 20px;
-        }
-
-        .quiz-options {
-            margin-top: 20px;
-        }
-
-        .quiz-option {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .submit-button {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            font-size: 1.5rem;
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .submit-button:hover {
-            background-color: #c0392b;
-        }
-
-        #result {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 2.0rem;
-            font-weight: bold;
-            color: green;
-        }
-    </style>
-
-<script>
-    function checkAnswers() {
-        const correctAnswers = ['True', 'False'];
-        const resultElement = document.getElementById('result');
-        const selectedAnswers = document.querySelectorAll('input[type="radio"]:checked');
-
-        if (selectedAnswers.length === correctAnswers.length) {
-            const isAllCorrect = Array.from(selectedAnswers).every((answer, index) => {
-                return answer.value === correctAnswers[index];
-            });
-
-            resultElement.textContent = isAllCorrect ? 'Correct!' : 'Incorrect!';
-        } else {
-            resultElement.textContent = 'Please answer all questions.';
-        }
-    }
-</script>
-
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="store.html"><img src="images/whitelogo.jpg" alt="logo" width="200" height="70"></a>
+<body style="display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 20px;">
+        <a class="navbar-brand" href="store.html"><img src="images/whitelogo.jpg" alt="logo" style="width: 200px; height: 70px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #343a40;">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto" style="font-size: 25px;">
-                <li class="nav-item active">
+                <li class="nav-item active" style="margin-right: 20px;">
                     <a class="nav-link" href="quizStartPage.html"><b>Quiz</b></a>
                 </li>
                 <li class="nav-item active">
@@ -131,73 +30,88 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="cart.html"><b>Cart</b></a>
                 </li>
-                <li class="nav-item active" style="margin-right: 20px;">
+                <li class="nav-item active">
                     <a class="nav-link" href="profile.html"><b>Profile</b></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
     </nav>
 
     <!-- Quiz Container 1 -->
-<div class="quiz-container">
-    <img class="quiz-image" src="images/garen.jpg" alt="Image 1">
-    <div class="quiz-content">
-        <h2 class="quiz-question">Garen is a Fighter.</h2>
-        <div class="quiz-options">
-            <label class="quiz-option">
-                <input type="radio" name="answer1" value="True">
-                True
-            </label>
+    <div class="quiz-container" style="max-width: 770px; margin: 20px auto; padding: 10px; border: 2px solid #ccc; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); font-size: 1.5rem; text-align: left; display: flex; align-items: center;">
+        <img class="quiz-image" src="images/garen.jpg" alt="Image 1" style="max-width: 50%; margin-right: 20px; border-radius: 8px;">
+        <div class="quiz-content" style="flex-grow: 1; overflow: hidden;">
+            <h2 class="quiz-question" style="font-family: 'Press Start 2P', cursive; margin-bottom: 20px; font-size: 20px;">Garen is a Fighter.</h2>
+            <div class="quiz-options" style="margin-top: 20px;">
+                <label class="quiz-option" style="display: block; margin-bottom: 10px;">
+                    <input type="radio" name="answer1" value="True">
+                    True
+                </label>
 
-            <label class="quiz-option">
-                <input type="radio" name="answer1" value="False">
-                False
-            </label>
+                <label class="quiz-option" style="display: block; margin-bottom: 10px;">
+                    <input type="radio" name="answer1" value="False">
+                    False
+                </label>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Quiz Container 2 -->
-<div class="quiz-container">
-    <img class="quiz-image" src="images/ahri_poster.jpg" alt="Image 2">
-    <div class="quiz-content">
-        <h2 class="quiz-question">Katarina is a Mage.</h2>
-        <div class="quiz-options">
-            <label class="quiz-option">
-                <input type="radio" name="answer2" value="True">
-                True
-            </label>
+    <!-- Quiz Container 2 -->
+    <div class="quiz-container" style="max-width: 770px; margin: 20px auto; padding: 10px; border: 2px solid #ccc; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); font-size: 1.5rem; text-align: left; display: flex; align-items: center;">
+        <img class="quiz-image" src="images/ahri_poster.jpg" alt="Image 2" style="max-width: 50%; margin-right: 20px; border-radius: 8px;">
+        <div class="quiz-content" style="flex-grow: 1; overflow: hidden;">
+            <h2 class="quiz-question" style="font-family: 'Press Start 2P', cursive; margin-bottom: 20px; font-size: 20px;">Katarina is a Mage.</h2>
+            <div class="quiz-options" style="margin-top: 20px;">
+                <label class="quiz-option" style="display: block; margin-bottom: 10px;">
+                    <input type="radio" name="answer2" value="True">
+                    True
+                </label>
 
-            <label class="quiz-option">
-                <input type="radio" name="answer2" value="False">
-                False
-            </label>
+                <label class="quiz-option" style="display: block; margin-bottom: 10px;">
+                    <input type="radio" name="answer2" value="False">
+                    False
+                </label>
+            </div>
         </div>
     </div>
-</div>
-
 
     <!-- Submit Button -->
-    <div id="result"></div>
-    <button class="submit-button" onclick="checkAnswers()">Submit</button>
+    <div id="result" style="margin-top: 20px; margin-bottom: 20px; text-align: center; font-size: 2.0rem; font-weight: bold; color: green;"></div>
+    <button class="submit-button" onclick="checkAnswers()" style="display: block; margin: 20px auto; padding: 10px 20px; font-size: 1.5rem; background-color: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer;"
+        onmouseover="this.style.backgroundColor='#c0392b'" onmouseout="this.style.backgroundColor='#e74c3c'">Submit</button>
 
     <!-- Footer Container -->
-    <div class="footer-container">
-        <!-- Footer -->
-        <footer class="py-5">
-            <div class="container">
-                <p class="m-0 text-center text-white">&copy; Legends Vault, 2023. All rights reserved</p>
-            </div>
-        </footer>
-    </div>
+    <footer class="py-5" style="background-color: #2D2D2D;">
+        <div class="container"><p class="m-0 text-center text-white">&copy; Legends Vault, 2023. All rights reserved</p></div>
+    </footer>
 
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        function checkAnswers() {
+            const correctAnswers = ['True', 'False'];
+            const resultElement = document.getElementById('result');
+            const selectedAnswers = document.querySelectorAll('input[type="radio"]:checked');
+
+            if (selectedAnswers.length === correctAnswers.length) {
+                const isAllCorrect = Array.from(selectedAnswers).every((answer, index) => {
+                    return answer.value === correctAnswers[index];
+                });
+
+                resultElement.textContent = isAllCorrect ? 'Correct!' : 'Incorrect!';
+                resultElement.style.color = isAllCorrect ? 'green' : 'red'; // Change font color
+            } else {
+                resultElement.textContent = 'Please answer all questions.';
+                resultElement.style.color = 'red'; // Change font color
+            }
+        }
+    </script>
 </body>
 </html>
