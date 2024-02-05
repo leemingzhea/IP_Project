@@ -5,111 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-        body {
-            background-color: #f8f9fa;
-            background: url("images/quizpage.jpg") center center fixed;
-            background-size: cover;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .quiz-container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 40px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            font-size: 1.5rem;
-            text-align: center;
-        }
-
-        h2 {
-            font-family: 'Press Start 2P', cursive;
-            margin-bottom: 100px;
-        }
-
-        p {
-            margin-bottom: 100px;
-        }
-
-        .start-quiz-button {
-            font-family: 'Press Start 2P', cursive;
-            background-color: #e74c3c;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .start-quiz-button:hover {
-            background-color: #c0392b;
-        }
-
-        footer {
-            margin-top: auto;
-            background-color: #2D2D2D;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body style="background-color: #f8f9fa; background: url('images/quizpage.jpg') center center fixed; background-size: cover; min-height: 100vh; display: flex; flex-direction: column;">
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="store.html"><img src="images/whitelogo.jpg" alt="logo" width="200" height="70"></a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 20px;">
+        <a class="navbar-brand" href="store.html"><img src="images/whitelogo.jpg" alt="logo" style="width: 200px; height: 70px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #343a40;">
+        <span class="navbar-toggler-icon" style="background-color: white;"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto" style="font-size: 25px;">
-            <li class="nav-item active">
-                <a class="nav-link" href="quizStartPage.html"><b>Quiz</b></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="quizPoll.html"><b>Poll</b></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="rewards.html"><b>Rewards</b></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="cart.html"><b>Cart</b></a>
-            </li>
-            <li class="nav-item active" style="margin-right: 20px;">
-                <a class="nav-link" href="profile.html"><b>Profile</b></a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
-        </form>
+            <ul class="navbar-nav ml-auto" style="font-size: 25px;">
+                <li class="nav-item active" style="margin-right: 20px;">
+                    <a class="nav-link" href="quizStartPage.html"><b>Quiz</b></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="quizPoll.html"><b>Poll</b></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="rewards.html"><b>Rewards</b></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="cart.html"><b>Cart</b></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="profile.html"><b>Profile</b></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
     </nav>
 
     <!-- Quiz Welcome Section -->
-    <div class="quiz-container">
-        <h2>Weekly Trivia Quiz</h2>
-        <p>Test your knowledge and earn extra keys with our exciting quiz!</p>
-        <button class="start-quiz-button" onclick="startQuiz()">Start Quiz</button>
+    <div class="quiz-container" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 600px; margin: 20px auto; padding: 40px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); font-size: 1.5rem; text-align: center;">
+        <h2 style="font-family: 'Press Start 2P', cursive; margin-bottom: 100px;">Weekly Trivia Quiz</h2>
+        <p style="margin-bottom: 100px;">Test your knowledge and earn extra keys with our exciting quiz!</p>
+        <button class="start-quiz-button" onclick="startQuiz()" style="font-family: 'Press Start 2P', cursive; background-color: #e74c3c; color: white; padding: 15px 30px; font-size: 1.2rem; cursor: pointer; border: none; border-radius: 5px; transition: background-color 0.3s ease;"
+        onmouseover="this.style.backgroundColor='#c0392b'" onmouseout="this.style.backgroundColor='#e74c3c'">Start Quiz</button>
     </div>
 
     <!-- Footer -->
-    <footer class="py-5" style="background-color: #2D2D2D;">
+    <footer class="py-5" style="margin-top: auto; background-color: #2D2D2D; color: white; text-align: center; padding: 10px 0;">
         <div class="container"><p class="m-0 text-center text-white">&copy; Legends Vault, 2023. All rights reserved</p></div>
     </footer>
 
