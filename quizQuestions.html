@@ -1,133 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Quiz Questions</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        .body-quiz {
-            margin: 0;
-            padding: 0;
-            font-family: 'Press Start 2P', cursive;
-            background-size: cover;
+        body {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .footer-container {
+            margin-top: auto;
+        }
+
+        footer {
+            background-color: #2D2D2D;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
         }
 
         .quiz-container {
+            max-width: 770px;
+            margin: 20px auto;
+            padding: 10px; /* Adjust padding to reduce height */
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            font-size: 1.5rem;
+            text-align: left;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            width: 80%;
-            margin: 20px auto;
         }
 
-        .quiz-container img {
-            width: 40%;
+        .quiz-image {
+            max-width: 50%;
             margin-right: 20px;
-            border-radius: 5px;
+            border-radius: 8px;
         }
 
         .quiz-content {
-            width: 50%;
+            flex-grow: 1;
+            overflow: hidden; /* Ensure all text is within the container */
+        }
+
+        .quiz-question {
+            font-family: 'Press Start 2P', cursive;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .quiz-options {
+            margin-top: 20px;
+        }
+
+        .quiz-option {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .submit-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #c0392b;
         }
 
         #result {
             margin-top: 20px;
             margin-bottom: 20px;
             text-align: center;
+            font-size: 2.0rem;
             font-weight: bold;
             color: green;
         }
-
-        .button {
-            font-family: 'Press Start 2P', cursive;
-            background-color: white;
-            color: black;
-            padding: 20px 50px;
-            font-size: 18px;
-            cursor: pointer;
-            border: 2px solid black; /* Add a black border */
-            border-radius: 5px;
-            margin-top: auto;
-            margin-bottom: auto;
-            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and color */
-        }
-
-        .button:hover {
-            background-color: #e74c3c; /* Red color on hover */
-            color: white;
-        }
-
-        .button:active {
-            background-color: #c0392b; /* Darker red when button is clicked */
-            color: #fff; /* White text when button is clicked */
-        }
     </style>
 
-    <script>
-        function checkAnswers() {
-            const correctAnswers = ['True', 'False'];
-            const resultElement = document.getElementById('result');
-            const selectedAnswers = document.querySelectorAll('input[type="radio"]:checked');
+<script>
+    function checkAnswers() {
+        const correctAnswers = ['True', 'False'];
+        const resultElement = document.getElementById('result');
+        const selectedAnswers = document.querySelectorAll('input[type="radio"]:checked');
 
-            if (selectedAnswers.length === correctAnswers.length) {
-                const isAllCorrect = Array.from(selectedAnswers).every((answer, index) => {
-                    return answer.value === correctAnswers[index];
-                });
+        if (selectedAnswers.length === correctAnswers.length) {
+            const isAllCorrect = Array.from(selectedAnswers).every((answer, index) => {
+                return answer.value === correctAnswers[index];
+            });
 
-                resultElement.textContent = isAllCorrect ? 'Correct!' : 'Incorrect!';
-            } else {
-                resultElement.textContent = 'Please answer all questions.';
-            }
+            resultElement.textContent = isAllCorrect ? 'Correct!' : 'Incorrect!';
+        } else {
+            resultElement.textContent = 'Please answer all questions.';
         }
-    </script>
-    
+    }
+</script>
+
 </head>
-<body class="body-quiz">
-    <div class="quiz-container">
-        <img src="images/garen.jpg" alt="Question 1 Image">
-        <div class="quiz-content">
-            <h2>Question 1:</h2>
-            <p>Garen is a Fighter.</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer-1" value="True">
-                <label class="form-check-label">True</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer-1" value="False">
-                <label class="form-check-label">False</label>
-            </div>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="store.html"><img src="images/whitelogo.jpg" alt="logo" width="200" height="70"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto" style="font-size: 25px;">
+                <li class="nav-item active">
+                    <a class="nav-link" href="quizStartPage.html"><b>Quiz</b></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="quizPoll.html"><b>Poll</b></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="rewards.html"><b>Rewards</b></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="cart.html"><b>Cart</b></a>
+                </li>
+                <li class="nav-item active" style="margin-right: 20px;">
+                    <a class="nav-link" href="profile.html"><b>Profile</b></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Quiz Container 1 -->
+<div class="quiz-container">
+    <img class="quiz-image" src="images/garen.jpg" alt="Image 1">
+    <div class="quiz-content">
+        <h2 class="quiz-question">Garen is a Fighter.</h2>
+        <div class="quiz-options">
+            <label class="quiz-option">
+                <input type="radio" name="answer1" value="True">
+                True
+            </label>
+
+            <label class="quiz-option">
+                <input type="radio" name="answer1" value="False">
+                False
+            </label>
         </div>
     </div>
+</div>
 
-    <div class="quiz-container">
-        <img src="images/katarina.jpg" alt="Question 2 Image">
-        <div class="quiz-content">
-            <h2>Question 2:</h2>
-            <p>Katarina is a Mage.</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer-2" value="True">
-                <label class="form-check-label">True</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer-2" value="False">
-                <label class="form-check-label">False</label>
-            </div>
+<!-- Quiz Container 2 -->
+<div class="quiz-container">
+    <img class="quiz-image" src="images/ahri_poster.jpg" alt="Image 2">
+    <div class="quiz-content">
+        <h2 class="quiz-question">Katarina is a Mage.</h2>
+        <div class="quiz-options">
+            <label class="quiz-option">
+                <input type="radio" name="answer2" value="True">
+                True
+            </label>
+
+            <label class="quiz-option">
+                <input type="radio" name="answer2" value="False">
+                False
+            </label>
         </div>
     </div>
+</div>
 
+
+    <!-- Submit Button -->
     <div id="result"></div>
-    <button class="quiz-button" onclick="checkAnswers()">Submit</button>
+    <button class="submit-button" onclick="checkAnswers()">Submit</button>
+
+    <!-- Footer Container -->
+    <div class="footer-container">
+        <!-- Footer -->
+        <footer class="py-5">
+            <div class="container">
+                <p class="m-0 text-center text-white">&copy; Legends Vault, 2023. All rights reserved</p>
+            </div>
+        </footer>
+    </div>
 
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
