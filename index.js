@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         );
         
         setTimeout(function() {
-          window.location.href = "http://127.0.0.1:5501/store.html";
+          window.location.href = "http://127.0.0.1:5500/store.html";
         }, 3000);
       } else {
         $("#message").html(`<div class="container p-3 text-danger border border-danger rounded-3">
