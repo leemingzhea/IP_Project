@@ -18,20 +18,23 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto" style="font-size: 25px;">
+                <li class="nav-item active">
+                <a class="nav-link" href="quizStartPage.html"><b>Quiz</b></a> 
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="quizPoll.html"><b>Poll</b></a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="rewards.html"><b>Rewards</b></a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="cart.html"><b>Cart</b></a>
+                </li>
                 <li class="nav-item active" style="margin-right: 20px;">
-                    <a class="nav-link" href="quizStartPage.html"><b>Quiz</b></a>
+                <a class="nav-link" href="profile.html"><b>Profile</b></a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="quizPoll.html"><b>Poll</b></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="rewards.html"><b>Rewards</b></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="cart.html"><b>Cart</b></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="profile.html"><b>Profile</b></a>
+                <li class="nav-item active" style="margin-left: -22px; margin-right: 20px;">
+                <a class="nav-link" href="contact.html"><b>Contact</b></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -93,25 +96,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-    <script>
-        function checkAnswers() {
-            const correctAnswers = ['True', 'False'];
-            const resultElement = document.getElementById('result');
-            const selectedAnswers = document.querySelectorAll('input[type="radio"]:checked');
-
-            if (selectedAnswers.length === correctAnswers.length) {
-                const isAllCorrect = Array.from(selectedAnswers).every((answer, index) => {
-                    return answer.value === correctAnswers[index];
-                });
-
-                resultElement.textContent = isAllCorrect ? 'Correct!' : 'Incorrect!';
-                resultElement.style.color = isAllCorrect ? 'green' : 'red'; // Change font color
-            } else {
-                resultElement.textContent = 'Please answer all questions.';
-                resultElement.style.color = 'red'; // Change font color
-            }
-        }
-    </script>
+    <script src="quizQuestions.js"></script>
 </body>
 </html>
