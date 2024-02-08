@@ -152,19 +152,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto" style="font-size: 25px;">
                 <li class="nav-item active">
-                    <a class="nav-link" href="quizStartPage.html"><b>Quiz</b></a>
+                <a class="nav-link" href="quizStartPage.html"><b>Quiz</b></a> 
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="quizPoll.html"><b>Poll</b></a>
+                <a class="nav-link" href="quizPoll.html"><b>Poll</b></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="rewards.html"><b>Rewards</b></a>
+                <a class="nav-link" href="rewards.html"><b>Rewards</b></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="cart.html"><b>Cart</b></a>
+                <a class="nav-link" href="cart.html"><b>Cart</b></a>
                 </li>
                 <li class="nav-item active" style="margin-right: 20px;">
-                    <a class="nav-link" href="profile.html"><b>Profile</b></a>
+                <a class="nav-link" href="profile.html"><b>Profile</b></a>
+                </li>
+                <li class="nav-item active" style="margin-left: -22px; margin-right: 20px;">
+                <a class="nav-link" href="contact.html"><b>Contact</b></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -209,7 +212,7 @@
                         <h2 style="font-size: 40px; margin-top: 35px; margin-bottom: 30px; padding-left: 20px;" class="heading text-center">Payment</h2>
                     </div>
                     </div>
-                    <form onsubmit="event.preventDefault()" class="form-card">
+                    <form id="paymentForm" onsubmit="event.preventDefault()" class="form-card">
                         <div class="row justify-content-center mb-4 radio-group">
                             <div class="col-sm-3 col-5">
                                 <div class='radio selected mx-auto' data-value="paypal"> <img class="fit-image" src="images/paypal.jpg" width="105px" height="55px"> </div>
@@ -229,22 +232,17 @@
                         <div class="row justify-content-center">
                             <div class="col-12">
                                 <div class="input-group">
-                                    <input type="text" name="Name" placeholder="Ah Heng"
+                                    <input type="text" id="name" name="Name" placeholder="Name"
                                         style="padding: 10px 15px 5px 15px; border: none; border: 1px solid lightgrey; border-radius: 6px; margin-bottom: 25px; margin-top: 2px; width: 100%; box-sizing: border-box; font-family: arial; color: #2C3E50; font-size: 14px; letter-spacing: 1px;">
-                                    <label
-                                        style="position: absolute; height: 24px; background: none; border-radius: 6px; line-height: 48px; font-size: 15px; color: gray; width: 100%; font-weight: 100; padding-left: 25px;">Name</label>
                                 </div>
                             </div>
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-12">
                                 <div class="input-group">
-                                    <input type="text" id="cr_no" name="card-no" placeholder="0000 0000 0000 0000"
+                                    <input type="text" id="card" name="card-no" placeholder="Card Number"
                                         minlength="19" maxlength="19"
                                         style="padding: 10px 15px 5px 15px; border: none; border: 1px solid lightgrey; border-radius: 6px; margin-bottom: 25px; margin-top: 2px; width: 100%; box-sizing: border-box; font-family: arial; color: #2C3E50; font-size: 14px; letter-spacing: 1px;">
-                                    <label
-                                        style="position: absolute; height: 24px; background: none; border-radius: 6px; line-height: 48px; font-size: 15px; color: gray; width: 100%; font-weight: 100; padding-left: 25px;">Card
-                                        Number</label>
                                 </div>
                             </div>
                         </div>
@@ -256,13 +254,15 @@
                                         <div class="input-group"> <input type="text" id="exp" name="expdate" placeholder="MM/YY" minlength="5" maxlength="5"> <label>Expiry Date</label> </div>
                                     </div>
                                     <div class="col-6">
-                                        <div class="input-group"> <input type="password" name="cvv" placeholder="&#9679;&#9679;&#9679;" minlength="3" maxlength="3"> <label>CVV</label> </div>
+                                        <div class="input-group"> <input type="password" id="cvv" name="cvv" placeholder="&#9679;&#9679;&#9679;" minlength="3" maxlength="3"> <label>CVV</label> </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                            <div class="col-md-12"> <input type="submit" value="Confirm Payment" class="btn btn-pay placeicon"> </div>
+                            <div class="col-md-12"> 
+                                <input type="submit" id="payment" value="Confirm Payment" class="btn btn-pay placeicon">
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -288,5 +288,6 @@
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
     <script src="payment.js"></script>
+    
 </body>
 </html>

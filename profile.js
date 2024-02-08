@@ -2,8 +2,10 @@ const APIKEY = "65950459facbda2bda336da0";
 
 // Retrieve the username from local storage
 var username = localStorage.getItem("username");
+var points = localStorage.getItem("points");
 // Display the username in the specified element
 document.getElementById("username").innerText = username;
+document.getElementById("points").innerText = points;
 
 // Make a GET request to the RESTful API
 fetch("https://interactivedev-a367.restdb.io/rest/accounts", {

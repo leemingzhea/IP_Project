@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     //For Card Number formatted input
-    var cardNum = document.getElementById('cr_no');
+    var cardNum = document.getElementById('card');
     cardNum.onkeyup = function (e) {
         if (this.value == this.lastValue) return;
         var caretPosition = this.selectionStart;
@@ -61,10 +61,10 @@ $(document).ready(function(){
         var city = document.getElementById('city').value.trim();
         var zip = document.getElementById('zip').value.trim();
         var country = document.getElementById('country').value.trim();
-        var name = document.getElementsByName('Name')[0].value.trim();
-        var cardNo = document.getElementsByName('card-no')[0].value.trim();
-        var expDate = document.getElementsByName('expdate')[0].value.trim();
-        var cvv = document.getElementsByName('cvv')[0].value.trim();
+        var name = document.getElementById('name').value.trim();
+        var cardNo = document.getElementById('card').value.trim(); // Update here
+        var expDate = document.getElementById('exp').value.trim(); // Update here
+        var cvv = document.getElementById('cvv').value.trim();
 
         // Check if any required field is empty
         if (address === '' || city === '' || zip === '' || country === '' || name === '' || cardNo === '' || expDate === '' || cvv === '') {

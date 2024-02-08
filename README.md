@@ -34,13 +34,14 @@ Wireframe: https://www.figma.com/file/hCc72VxyrnP5RolPRe9eSL/IP-Project?type=des
 
 + Navigation Bar - Allows users to easily explore different sections of the website. menu will drop down upon clicking the hamburger menu
 + Store Page - By clicking the view more button, the page will redirect users to the product page
-+ 3D Product Page - Allows users to view products in 3d view with detailed product descriptions and allow them to add to cart
++ 3D Product Page - Allows users to view and interact products in 3d view with detailed product descriptions and allow them to add to cart
 + 2D Product Page - Provide users with detailed product descriptions and allow them to add to cart
-+ Quiz Page - Redirect users to the product description page after clicking on the product
-+ Community Poll - Allows users to enter their email and get latest updates about the band's development
-+ Rewards Page - (not done)
-+ Cartpage - (not done)
++ Quiz Page - Users answers the provided question by clicking on the radio buttons, then press Submit to view the results.
++ Community Poll - Users get to vote which is their desired choices in our poll page.
++ Rewards Page - Allows users to use their accumulated points from doing quizzes to claim monetary rewards.
++ Cartpage - Allows user to view what they added to cart in a consolidated view, able to remove the product from the cart, price will reflect dynamically at the pricing section.
 + Profile Page - Allows users to conveniently access to important information such as their orders, payment methods, and loyalty points
++ Contact Page - Enables users to engage with the Google embedded map and access details such as office locations and business hours.
 
 ### Features Left to Implement
 
@@ -68,10 +69,8 @@ To begin, navigate to the index.html file and open it in your preferred web brow
 - Password: 1234
 
 1. Sign In Page:
-    - This is where our flow starts. Run index.html. Key in the user credentials that we have created in RestDB. 
-      Username - Ah Heng, Password - 1234 
     - Try to submit the empty form and verify that a message in red at the bottom shows: **Invalid email or password, please try again.
-    - Key in the correct credentials provided above, and click on Login. The page should transition to a lottie animation, then brings you to our main store page, store.html
+    - Key in the correct credentials provided above, and click on Login. The page should transition to a lottie animation, then redirects you to our main store page, store.html
 
 2. Navigation Bar:
     - Click on any page that the user wants to visit, verify that the selected page loads correctly
@@ -85,40 +84,45 @@ To begin, navigate to the index.html file and open it in your preferred web brow
     - Hover over the view more button, verify that the button turns red and reverts back to its original color when the mouse is moved away
     - Click on any view more button in the product border, verify that the page redirects to the corresponding product page for the selected product
 
-5. 2D Product Page: (not done)
+5. 2D Product Page:
     - Click on the drop down menu for the quantity, verify that the quantity drop down menu shows a range from 1 to 5. 
-    - Click on the Add to Cart button, verify that the button changes to red, and the text changes to Added to Cart.
+    - Click on the "Add to Cart" button and confirm that it turns red when hovered over, accompanied by a message below indicating "Item added to cart."
 
-6. 3D Product Page: (not done)
+6. 3D Product Page: 
     - Try to navigate around 3D model by panning, rotating, and zooming, ensure the model changes angles.
     - Click on the drop down menu for the quantity, verify that the quantity drop down menu shows a range from 1 to 5.
-    - Click on the Add to Cart button, verify that the button changes to red, and the text changes to Added to Cart.
+    - Click on the "Add to Cart" button and confirm that it turns red when hovered over, accompanied by a message below indicating "Item added to cart."
 
 7. Quiz Start Page: (not done)
     - Click on the Start Quiz button, verify that the the page redirects you to to quizQuestions.html
 
 8. Quiz Questions Page:
     - Test for Incorrect outcome. Click on True for the first question, Click on False for the second question. A red bolded text should appear below the questions that says 'Incorrect!'
-    - Test for Correct outcome. Click on True for the first question, Click on False for the second question. A green bolded text should appear below the questions that says 'Correct!' (not done)
+    - Test for Correct outcome. Click on True for the first question, Click on False for the second question. A green bolded text should appear below the questions that says 'Correct! 50 points awarded.' 
 
 9. Community Poll Page: 
     - Click on the radio for the artwork that the user likes then submit, verify that the vote has been submitted
 
-10. Rewards Page: (not done)
+10. Rewards Page: 
     - Verify that you have 500 points to spend.
     - Click on any of the Claim button, your points should deduct accordingly.
 
 11. Cart Page: (not done)
-    -
+    - Ensure that you have browsed through any of the Product Pages and click on 'Add to Cart' button before you come to this page.
+    - Verify that the Product that you have added to cart is shown along with the Product Title, Price, Quantity, and a Remove button.
+    - Verify that the price reflected below is correct and corresponds to your Product price.
+    - Verify that when you click on the Apply button without entering any values in the Discount Code placeholder, a pop-up message will appear on top of the window indicating "Invalid discount code. Please try again."
+    - Click on the 'Proceed to Pay' button, you should be redirected to the Payment Page.
 
 12. Payment Page:
     - Verify that the card number and expiry date only allows you to key in numerical value.
     - Click on any of the payment option images, ensure that the buttons are hovered in blue colour when selected.
-    - 
+    - Click on 'Confirm Payment' without filling in anything, a pop-up message will appear on top of the window indicating "Please fill in all the required fields."
+    - Now click on 'Confirm Payment' after filling in all the required fields, you will be redirected back to our store page.
 
 4. Profile page: 
+    - Verify that your username is displayed correctly
     - Try to click the sign out button, verify that the page redirects the user back to the login page
-    - 
 
 
 ## Credits
@@ -143,7 +147,6 @@ To begin, navigate to the index.html file and open it in your preferred web brow
 
 ### Issues we encountered
 
-![GitHub Logo](/images/error.jpg)
-Format: ![Alt Text](url)
+![Image Description](images/error.jpg)
 
-+ Unable to commit and push to github, error prompt:
++ If one person commits their code, the other person will have this error when trying to pull the code from github. we tried to stash our code before pulling but it prompt another error. Hence, the commits were mostly done by one person.
