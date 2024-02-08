@@ -9,49 +9,9 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background-image: #f8f9fa; 
-        }
-
-        .container-contact {
-            width: 70%; 
-            margin-top: 30px;
-            padding: 50px 0;
-            text-align: center;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .container-contact img {
-            max-width: 100px; 
-            margin-bottom: 20px; 
-        }
-
-        .container-contact i {
-            font-size: 5rem;
-            color: #1f4888; 
-        }
-
-        .container-contact h4 {
-            font-weight: bold;
-            margin-top: 20px;
-            color: #1f4888; 
-        }
-
-        .container-contact p {
-            color: #495057; 
-        }
-
-        #map-container {
-            height: 400px; 
-            margin-top: 56px; 
-        }
-    </style>
 </head>
 
-<body>
+<body style="background-image: #f8f9fa;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="store.html"><img src="images/whitelogo.jpg" alt="logo" width="200" height="70"></a>
 
@@ -64,19 +24,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto" style="font-size: 25px;">
                 <li class="nav-item active">
-                    <a class="nav-link" href="quizStartPage.html"><b>Quiz</b></a>
+                <a class="nav-link" href="quizStartPage.html"><b>Quiz</b></a> 
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="quizPoll.html"><b>Poll</b></a>
+                <a class="nav-link" href="quizPoll.html"><b>Poll</b></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="rewards.html"><b>Rewards</b></a>
+                <a class="nav-link" href="rewards.html"><b>Rewards</b></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="cart.html"><b>Cart</b></a>
+                <a class="nav-link" href="cart.html"><b>Cart</b></a>
                 </li>
                 <li class="nav-item active" style="margin-right: 20px;">
-                    <a class="nav-link" href="profile.html"><b>Profile</b></a>
+                <a class="nav-link" href="profile.html"><b>Profile</b></a>
+                </li>
+                <li class="nav-item active" style="margin-left: -22px; margin-right: 20px;">
+                <a class="nav-link" href="contact.html"><b>Contact</b></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -87,40 +50,40 @@
     </nav>
 
     <!-- Google Maps Embed Container -->
-    <div id="map-container" class="container-fluid">
+    <div id="map-container" class="container-fluid" style="height: 400px; margin-top: 56px;">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.308056583295!2d103.8523576!3d1.2772443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1995d1353a77%3A0x7571f2c9b9280de5!2sMarina%20One%20West%20Tower!5e0!3m2!1sen!2ssg!4v1706797284017!5m2!1sen!2ssg"
             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <!-- First Container -->
-    <div class="container-fluid container-contact bg-white">
+    <div class="container-fluid bg-white" style="width: 70%; margin-top: 30px; padding: 50px 0; text-align: center; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
         <div class="container">
-            <img src="images/location.png" alt="Location Icon" class="img-fluid">
-            <i class="fas fa-map-marker-alt"></i>
-            <h4>Visit Us</h4>
-            <p>Our Singapore office is our Asia-Pacific (APAC) Headquarters and home to Rioters from all over the world.</p>
+            <img src="images/location.png" alt="Location Icon" class="img-fluid" style="max-width: 100px; margin-bottom: 20px;">
+            <i class="fas fa-map-marker-alt" style="font-size: 5rem; color: #1f4888;"></i>
+            <h4 style="font-weight: bold; margin-top: 20px; color: #1f4888;">Visit Us</h4>
+            <p style="color: #495057;">Our Singapore office is our Asia-Pacific (APAC) Headquarters and home to Rioters from all over the world.</p>
             <p><strong>Location:</strong> Marina One West Tower</p>
         </div>
     </div>
 
     <!-- Second Container -->
-    <div class="container-fluid container-contact bg-white">
+    <div class="container-fluid bg-white" style="width: 70%; margin-top: 30px; padding: 50px 0; text-align: center; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
         <div class="container">
-            <img src="images/phone.jpg" alt="Phone Icon" class="img-fluid">
-            <i class="fas fa-phone"></i>
-            <h4>Contact Us</h4>
-            <p>Phone: +123 456 789</p>
-            <p>Send us an email at: <a href="mailto:info@example.com">riot@games.com</a></p>
+            <img src="images/phone.jpg" alt="Phone Icon" class="img-fluid" style="max-width: 100px; margin-bottom: 20px;">
+            <i class="fas fa-phone" style="font-size: 5rem; color: #1f4888;"></i>
+            <h4 style="font-weight: bold; margin-top: 20px; color: #1f4888;">Contact Us</h4>
+            <p style="color: #495057;">Phone: +123 456 789</p>
+            <p>Send us an email at: <a href="mailto:info@example.com" style="color: #1f4888;">riot@games.com</a></p>
         </div>
     </div>
 
     <!-- Third Container -->
-    <div class="container-fluid container-contact bg-white">
+    <div class="container-fluid bg-white" style="width: 70%; margin-top: 30px; padding: 50px 0; text-align: center; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
         <div class="container">
-            <img src="images/clock.jpg" alt="Email Icon" class="img-fluid">
-            <i class="fas fa-envelope"></i>
-            <h4>Opening Hours</h4>
-            <p><strong>Mon to Fri:</strong> 8am - 5:30pm</p>
+            <img src="images/clock.jpg" alt="Email Icon" class="img-fluid" style="max-width: 100px; margin-bottom: 20px;">
+            <i class="fas fa-envelope" style="font-size: 5rem; color: #1f4888;"></i>
+            <h4 style="font-weight: bold; margin-top: 20px; color: #1f4888;">Opening Hours</h4>
+            <p style="color: #495057;"><strong>Mon to Fri:</strong> 8am - 5:30pm</p>
             <p><strong>Sat, Sun & PH:</strong> Closed</p>
         </div>
     </div>
