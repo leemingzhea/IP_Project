@@ -150,4 +150,4 @@ To begin, navigate to the index.html file and open it in your preferred web brow
 
 ![Image Description](images/error.jpg)
 
-+ If one person commits their code, the other person will have this error when trying to pull the code from github. we tried to stash our code before pulling but it prompt another error. Hence, the commits were mostly done by one person.
++ If one person commits their code, the other person will encounter the "Please clean your repository working tree before checkout" error when trying to pull the code from github. we've tried to stash our code before pulling but it will prompt another error. Hence, we decided to exchange our updated code through whatsapp and leave the commits to one person.
