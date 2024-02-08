@@ -153,6 +153,15 @@ To begin, navigate to the index.html file and open it in your preferred web brow
 
 ### Issues we encountered
 
-![Image Description](images/error.jpg)
++ ![Image Description](images/error.jpg)
 
 + If one person commits their code, the other person will encounter the "Please clean your repository working tree before checkout" error when trying to pull the code from github. we've tried to stash our code before pulling but it will prompt another error. Hence, we decided to exchange our updated code through whatsapp and leave the commits to one person.
+
+### Restdb
+
++ ![alt text](images/restdb.jpg)
+
++ ![alt text](images/restdb2.jpg)
+
++ The restdb data saved is manually created in restdb, we only used the users input from our webpage for validation to ensure that it matches the one saved in our database
+
