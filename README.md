@@ -143,6 +143,6 @@ To begin, navigate to the index.html file and open it in your preferred web brow
 
 ### Issues we encountered
 
-images/error.jpg
+![Image Description](images/error.jpg)
 
 + Unable to commit and push to github, error prompt:
