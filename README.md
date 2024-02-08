@@ -143,6 +143,7 @@ To begin, navigate to the index.html file and open it in your preferred web brow
 
 ### Issues we encountered
 
-![Image Description](images/error.jpg)
+![GitHub Logo](/images/error.jpg)
+Format: ![Alt Text](url)
 
 + Unable to commit and push to github, error prompt:
