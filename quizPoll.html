@@ -118,42 +118,6 @@
     </style>
 </head>
 
-<script>
-    function vote(optionId) {
-        const votedOption = document.getElementById(optionId);
-        const votedContainer = votedOption.closest('.option');
-
-        // Display the result
-        displayResult(optionId);
-
-        // Add the voted class to trigger the animation
-        votedContainer.classList.add('voted');
-
-        // Remove the class after the animation completes (1s)
-        setTimeout(() => {
-            votedContainer.classList.remove('voted');
-        }, 1000);
-    }
-
-    function displayResult(optionId) {
-        const resultContainer = document.getElementById('poll-result');
-        const championName = getChampionName(optionId);
-
-        resultContainer.textContent = `You have voted for ${championName}!`;
-    }
-
-    function getChampionName(championValue) {
-        switch (championValue) {
-            case 'option1':
-                return 'Leona';
-            case 'option2':
-                return 'Diana';
-            default:
-                return 'Unknown Champion';
-        }
-    }
-</script>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="store.html"><img src="images/whitelogo.jpg" alt="logo" width="200" height="70"></a>
@@ -164,19 +128,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto" style="font-size: 25px;">
                 <li class="nav-item active">
-                    <a class="nav-link" href="quizStartPage.html"><b>Quiz</b></a>
+                <a class="nav-link" href="quizStartPage.html"><b>Quiz</b></a> 
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="quizPoll.html"><b>Poll</b></a>
+                <a class="nav-link" href="quizPoll.html"><b>Poll</b></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="rewards.html"><b>Rewards</b></a>
+                <a class="nav-link" href="rewards.html"><b>Rewards</b></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="cart.html"><b>Cart</b></a>
+                <a class="nav-link" href="cart.html"><b>Cart</b></a>
                 </li>
                 <li class="nav-item active" style="margin-right: 20px;">
-                    <a class="nav-link" href="profile.html"><b>Profile</b></a>
+                <a class="nav-link" href="profile.html"><b>Profile</b></a>
+                </li>
+                <li class="nav-item active" style="margin-left: -22px; margin-right: 20px;">
+                <a class="nav-link" href="contact.html"><b>Contact</b></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -221,7 +188,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="quizPoll.js"></script>
 
 </body>
-
 </html>
