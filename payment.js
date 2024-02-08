@@ -54,3 +54,8 @@ $(document).ready(function(){
             $(this).addClass('selected');
         });
     })
+
+    document.querySelector('.btn-pay').addEventListener('click', function() {
+        // Redirect to store.html
+        window.location.href = 'store.html';
+    });
