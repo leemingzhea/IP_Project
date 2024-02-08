@@ -146,6 +146,11 @@ To begin, navigate to the index.html file and open it in your preferred web brow
 + We received inspirations for this project from Riot Games, League of Legends.
 + Our gamification elements is inspired from multiple platforms such as Shopee and Grab.
 
+### Individual Contributions
+
++ Ming Zhea: Front-end layout
++ Tock Beng: API and abit of front-end
+
 ### Issues we encountered
 
 ![Image Description](images/error.jpg)
