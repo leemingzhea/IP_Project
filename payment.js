@@ -48,14 +48,30 @@ $(document).ready(function(){
         this.selectionStart = this.selectionEnd = caretPosition;
     }
         
-        // Radio button
-        $('.radio-group .radio').click(function(){
-            $(this).parent().parent().find('.radio').removeClass('selected');
-            $(this).addClass('selected');
-        });
-    })
-
-    document.querySelector('.btn-pay').addEventListener('click', function() {
-        // Redirect to store.html
-        window.location.href = 'store.html';
+    // Radio button
+    $('.radio-group .radio').click(function(){
+        $(this).parent().parent().find('.radio').removeClass('selected');
+        $(this).addClass('selected');
     });
+    
+    // Handle Payment Confirmation
+    document.querySelector('.btn-pay').addEventListener('click', function() {
+        // Check if all required fields are filled
+        var address = document.getElementById('address').value.trim();
+        var city = document.getElementById('city').value.trim();
+        var zip = document.getElementById('zip').value.trim();
+        var country = document.getElementById('country').value.trim();
+        var name = document.getElementsByName('Name')[0].value.trim();
+        var cardNo = document.getElementsByName('card-no')[0].value.trim();
+        var expDate = document.getElementsByName('expdate')[0].value.trim();
+        var cvv = document.getElementsByName('cvv')[0].value.trim();
+
+        // Check if any required field is empty
+        if (address === '' || city === '' || zip === '' || country === '' || name === '' || cardNo === '' || expDate === '' || cvv === '') {
+            alert('Please fill in all the required fields.');
+        } else {
+            // Redirect to store.html
+            window.location.href = 'store.html';
+        }
+    });
+});
