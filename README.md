@@ -26,6 +26,7 @@ Legends Vault is a ecommerce project that aims to redefine the shopping experien
 
 + As a user, I want to able to view the claimable discounts that are available so that i can claim and apply them for my future purchase
 
+Github: https://github.com/leemingzhea/IP_Project
 Wireframe: https://www.figma.com/file/hCc72VxyrnP5RolPRe9eSL/IP-Project?type=design&node-id=106-221&mode=design&t=btzFwI2MSw2ZuTRj-0
 
 ## Features
